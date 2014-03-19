@@ -312,6 +312,6 @@ KEY | DESCRIPTION
   This option makes Vundle use `git` instead of `https` when building
   absolute URIs. For example:
 >
-    Bundle 'sjl/gundo.vim' -> git@github.com:sjl/gundo.git
+    Plugin 'sjl/gundo.vim' -> git@github.com:sjl/gundo.git
 
 vim:tw=78:ts=8:ft=help:norl:

@@ -6,11 +6,11 @@
 
 [Vundle] allows you to...
 
-* keep track of and configure your scripts right in the `.vimrc`
-* [install] configured scripts (a.k.a. bundle)
-* [update] configured scripts
+* keep track of and configure your plugins right in the `.vimrc`
+* [install] configured plugins (a.k.a. scripts/bundle)
+* [update] configured plugins
 * [search] by name all available [Vim scripts]
-* [clean] unused scripts up
+* [clean] unused plugins up
 * run the above actions in a *single keypress* with [interactive mode]
 
 [Vundle] automatically...
@@ -35,7 +35,7 @@
 
 3. Configure Plugins:
 
-   Put this at the top of your `.vimrc` to use Vundle. Remove bundles you don't need, they are for illustration purposes.
+   Put this at the top of your `.vimrc` to use Vundle. Remove plugins you don't need, they are for illustration purposes.
 
    ```vim
    set nocompatible              " be iMproved, required
@@ -44,7 +44,7 @@
    " set the runtime path to include Vundle and initialize
    set rtp+=~/.vim/bundle/vundle/
    call vundle#rc()
-   " alternatively, pass a path where Vundle should install bundles
+   " alternatively, pass a path where Vundle should install plugins
    "let path = '~/some/path/here'
    "call vundle#rc(path)
 
@@ -52,7 +52,7 @@
    Plugin 'gmarik/vundle'
 
    " The following are examples of different formats supported.
-   " Keep bundle commands between here and filetype plugin indent on.
+   " Keep Plugin commands between here and filetype plugin indent on.
    " scripts on GitHub repos
    Plugin 'tpope/vim-fugitive'
    Plugin 'Lokaltog/vim-easymotion'
@@ -74,10 +74,10 @@
    "filetype plugin on
    "
    " Brief help
-   " :PluginList          - list configured bundles
-   " :PluginInstall(!)    - install (update) bundles
+   " :PluginList          - list configured plugins
+   " :PluginInstall(!)    - install (update) plugins
    " :PluginSearch(!) foo - search (or refresh cache first) for foo
-   " :PluginClean(!)      - confirm (or auto-approve) removal of unused bundles
+   " :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
    "
    " see :h vundle for more details or wiki for FAQ
    " NOTE: comments after Plugin commands are not allowed.

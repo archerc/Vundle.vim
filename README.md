@@ -18,6 +18,8 @@
 * manages the [runtime path] of your installed scripts
 * regenerates [help tags] after installing and updating
 
+[Vundle] is undergoing an [interface change], please stay up to date to get latest changes.
+
 ![Vundle-installer](http://25.media.tumblr.com/tumblr_m8m96w06G81r39828o1_1280.png)
 
 ## Quick Start
@@ -141,8 +143,9 @@ see [Vundle contributors](https://github.com/gmarik/vundle/graphs/contributors)
 [help tags]:http://vimdoc.sourceforge.net/htmldoc/helphelp.html#:helptags
 [runtime path]:http://vimdoc.sourceforge.net/htmldoc/options.html#%27runtimepath%27
 
-[install]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L179-198
-[update]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L200-209
-[search]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L211-238
-[clean]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L247-260
-[interactive mode]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L263-303
+[install]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L181-200
+[update]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L202-211
+[search]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L213-241
+[clean]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L250-264
+[interactive mode]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L266-305
+[interface change]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L319-327

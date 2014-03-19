@@ -33,7 +33,7 @@
 
    `$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
 
-3. Configure Bundles:
+3. Configure Plugins:
 
    Put this at the top of your `.vimrc` to use Vundle. Remove bundles you don't need, they are for illustration purposes.
 
@@ -49,24 +49,24 @@
    "call vundle#rc(path)
 
    " let Vundle manage Vundle, required
-   Bundle 'gmarik/vundle'
+   Plugin 'gmarik/vundle'
 
    " The following are examples of different formats supported.
    " Keep bundle commands between here and filetype plugin indent on.
    " scripts on GitHub repos
-   Bundle 'tpope/vim-fugitive'
-   Bundle 'Lokaltog/vim-easymotion'
-   Bundle 'tpope/vim-rails.git'
+   Plugin 'tpope/vim-fugitive'
+   Plugin 'Lokaltog/vim-easymotion'
+   Plugin 'tpope/vim-rails.git'
    " The sparkup vim script is in a subdirectory of this repo called vim.
    " Pass the path to set the runtimepath properly.
-   Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+   Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
    " scripts from http://vim-scripts.org/vim/scripts.html
-   Bundle 'L9'
-   Bundle 'FuzzyFinder'
+   Plugin 'L9'
+   Plugin 'FuzzyFinder'
    " scripts not on GitHub
-   Bundle 'git://git.wincent.com/command-t.git'
+   Plugin 'git://git.wincent.com/command-t.git'
    " git repos on your local machine (i.e. when working on your own plugin)
-   Bundle 'file:///home/gmarik/path/to/plugin'
+   Plugin 'file:///home/gmarik/path/to/plugin'
    " ...
 
    filetype plugin indent on     " required
@@ -74,21 +74,21 @@
    "filetype plugin on
    "
    " Brief help
-   " :BundleList          - list configured bundles
-   " :BundleInstall(!)    - install (update) bundles
-   " :BundleSearch(!) foo - search (or refresh cache first) for foo
-   " :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
+   " :PluginList          - list configured bundles
+   " :PluginInstall(!)    - install (update) bundles
+   " :PluginSearch(!) foo - search (or refresh cache first) for foo
+   " :PluginClean(!)      - confirm (or auto-approve) removal of unused bundles
    "
    " see :h vundle for more details or wiki for FAQ
-   " NOTE: comments after Bundle commands are not allowed.
+   " NOTE: comments after Plugin commands are not allowed.
    " Put your stuff after this line
    ```
 
-4. Install Bundles:
+4. Install Plugins:
 
-   Launch `vim` and  run `:BundleInstall`
+   Launch `vim` and  run `:PluginInstall`
 
-   To install from command line: `vim +BundleInstall +qall`
+   To install from command line: `vim +PluginInstall +qall`
 
 ## Docs
 
@@ -118,7 +118,7 @@ see [Vundle contributors](https://github.com/gmarik/vundle/graphs/contributors)
 ## TODO:
 [Vundle] is a work in progress, so any ideas and patches are appreciated.
 
-* ✓ activate newly added bundles on `.vimrc` reload or after `:BundleInstall`
+* ✓ activate newly added bundles on `.vimrc` reload or after `:PluginInstall`
 * ✓ use preview window for search results
 * ✓ Vim documentation
 * ✓ put Vundle in `bundles/` too (will fix Vundle help)

@@ -40,6 +40,9 @@ Vundle automatically...
 Vundle's search uses http://vim-scripts.org to provide a list of all
 available Vim scripts.
 
+Vundle is undergoing an interface change, see |vundle-interface-change| for
+more information.
+
 =============================================================================
 2. QUICK START ~
                                                           *vundle-quickstart*

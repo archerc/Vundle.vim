@@ -121,7 +121,7 @@ available Vim scripts.
 
 Vundle tracks what plugins you want configured by the `Plugin` commands in your
 `.vimrc`. Each `Plugin` command tells Vundle to activate the script on startup
-adding it to your runtimepath. Commenting out or removing the line will
+adding it to your |runtimepath|. Commenting out or removing the line will
 disable the `Plugin`.
 
 Each `Plugin` command takes a URI pointing to the script. No comments should
@@ -157,7 +157,7 @@ script.
 
 For example:
 >
-  Bundle 'git_URI', {'name': 'newPluginName'}
+  Plugin 'git_URI', {'name': 'newPluginName'}
 
 This can be used to prevent name collisions between plugins that Vundle would
 otherwise try to clone into the same directory. It also provides an additional

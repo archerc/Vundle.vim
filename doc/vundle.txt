@@ -342,11 +342,27 @@ KEY | DESCRIPTION
 7. VUNDLE INTERFACE CHANGE ~
                         *vundle-interface-change* *:Bundle* *:BundleInstall!*
                 *:BundleUpdate* *:BundleSearch* *:BundleList* *:BundleClean!*
+                            *:VundleInstall!* *:VundleUpdate* *:VundleSearch*
+                                                *:VundleList* *:VundleClean!*
 
-  In order to bring in some new changes, it has been decided we will adopt
-  a new interface using the Plugin namespace as opposed to the old Bundle
-  one. During the transition, the old Bundle interface will be preserved for
-  compatability. However, we may not make all new features available for it if
-  they break compatability. We encourage you to update your `.vimrc`.
->
+  In order to bring in new changes, Vundle is adopting a new interface.
+  Going forward we will support primarily the Plugin namespace, additionally
+  for convenience we will also alias some commands to the Vundle namespace.
+  The following table summarizes the interface changes.
+
+  Deprecated Names  | New Names
+  -----------------------------
+  Bundle            | Plugin
+  BundleInstall(!)  | PluginInstall(!), VundleInstall(!)
+  BundleUpdate      | PluginUpdate, VundleUpdate
+  BundleSearch(!)   | PluginSearch(!), VundleSearch(!)
+  BundleClean       | PluginClean(!), VundleClean(!)
+  BundleList        | PluginList
+  Bundles           | Plugins
+
+  Note: The Bundle commands will be deprecated. You may continue using them,
+  but they may not get all future updates. For instance, we have enabled
+  comments on Plugin lines but not Bundle, since it requires a change in
+  command declaration.
+
 vim:tw=78:ts=8:ft=help:norl:

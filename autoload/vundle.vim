@@ -4,6 +4,7 @@
 " Readme:       http://github.com/gmarik/vundle/blob/master/README.md
 " Version:      0.9
 
+" Plugin Commands
 com! -nargs=+  -bar   Plugin
 \ call vundle#config#bundle(<args>)
 
@@ -22,12 +23,27 @@ com! -nargs=0 -bang PluginList
 com! -nargs=? -bang   PluginClean
 \ call vundle#installer#clean('!' == '<bang>')
 
-com! -nargs=0         PluginDocs 
+com! -nargs=0         PluginDocs
 \ call vundle#installer#helptags(g:bundles)
 
 " Aliases
 com! PluginUpdate PluginInstall!
 
+" Vundle Aliases
+com! -nargs=? -bang -complete=custom,vundle#scripts#complete VundleInstall
+\ call vundle#installer#new('!' == '<bang>', <q-args>)
+
+com! -nargs=? -bang -complete=custom,vundle#scripts#complete VundleSearch
+\ call vundle#scripts#all('!'=='<bang>', <q-args>)
+
+com! -nargs=? -bang   VundleClean
+\ call vundle#installer#clean('!' == '<bang>')
+
+com! -nargs=0         VundleDocs
+\ call vundle#installer#helptags(g:bundles)
+
+" Aliases
+com! VundleUpdate PluginInstall!
 
 " deprecated
 com! -nargs=+         Bundle
@@ -48,7 +64,7 @@ com! -nargs=0 -bang BundleList
 com! -nargs=? -bang   BundleClean
 \ call vundle#installer#clean('!' == '<bang>')
 
-com! -nargs=0         BundleDocs 
+com! -nargs=0         BundleDocs
 \ call vundle#installer#helptags(g:bundles)
 
 " Aliases

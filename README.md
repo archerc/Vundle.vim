@@ -6,7 +6,7 @@
 
 [Vundle] allows you to...
 
-* keep track of and configure your plugins right in the `.vimrc`
+* keep track of and [configure] your plugins right in the `.vimrc`
 * [install] configured plugins (a.k.a. scripts/bundle)
 * [update] configured plugins
 * [search] by name all available [Vim scripts]
@@ -143,9 +143,10 @@ see [Vundle contributors](https://github.com/gmarik/vundle/graphs/contributors)
 [help tags]:http://vimdoc.sourceforge.net/htmldoc/helphelp.html#:helptags
 [runtime path]:http://vimdoc.sourceforge.net/htmldoc/options.html#%27runtimepath%27
 
-[install]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L181-200
-[update]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L202-211
-[search]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L213-241
-[clean]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L250-264
-[interactive mode]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L266-305
-[interface change]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L319-327
+[configure]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L119-202
+[install]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L204-223
+[update]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L225-234
+[search]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L236-264
+[clean]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L273-286
+[interactive mode]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L288-328
+[interface change]:https://github.com/gmarik/vundle/blob/master/doc/vundle.txt#L341-366

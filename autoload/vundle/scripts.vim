@@ -1,6 +1,6 @@
 func! vundle#scripts#all(bang, ...)
   let b:match = ''
-  let info = ['"Keymap: i - Install bundle; c - Cleanup; s - Search; R - Reload list']
+  let info = ['"Keymap: i - Install plugin; c - Cleanup; s - Search; R - Reload list']
   let matches = s:load_scripts(a:bang)
   if !empty(a:1)
     let matches = filter(matches, 'v:val =~? "'.escape(a:1,'"').'"')
@@ -10,11 +10,11 @@ func! vundle#scripts#all(bang, ...)
   endif
   call vundle#scripts#view('search',info, vundle#scripts#bundle_names(reverse(matches)))
   redraw
-  echo len(matches).' bundles found'
+  echo len(matches).' plugins found'
 endf
 
 func! vundle#scripts#reload() abort
-  silent exec ':BundleSearch! '.(exists('b:match') ? b:match : '')
+  silent exec ':PluginSearch! '.(exists('b:match') ? b:match : '')
   redraw
 endf
 
@@ -48,7 +48,7 @@ func! s:create_changelog() abort
     let updates = system(cmd)
 
     call add(g:vundle_changelog, '')
-    call add(g:vundle_changelog, 'Updated Bundle: '.bundle.name)
+    call add(g:vundle_changelog, 'Updated Plugin: '.bundle.name)
 
     if bundle.uri =~ "https://github.com"
       call add(g:vundle_changelog, 'Compare at: '.bundle.uri[0:-5].'/compare/'.initial_sha.'...'.updated_sha)
@@ -89,7 +89,7 @@ func! vundle#scripts#view(title, headers, results)
 
   let g:vundle_view = bufnr('%')
   "
-  " make buffer modifiable 
+  " make buffer modifiable
   " to append without errors
   set modifiable
 
@@ -99,7 +99,7 @@ func! vundle#scripts#view(title, headers, results)
   setl noswapfile
 
   setl cursorline
-  setl nonu ro noma 
+  setl nonu ro noma
   if (exists('&relativenumber')) | setl norelativenumber | endif
 
   setl ft=vundle
@@ -117,16 +117,7 @@ func! vundle#scripts#view(title, headers, results)
   com! -buffer -bang -nargs=? InstallPlugin
     \ call vundle#installer#run('vundle#installer#install', split(<q-args>,',')[0], ['!' == '<bang>', <q-args>])
 
-  com! -buffer -bang -nargs=1 DeleteBundle
-    \ call vundle#installer#run('vundle#installer#delete', split(<q-args>,',')[0], ['!' == '<bang>', <args>])
-
-  com! -buffer -bang -nargs=? InstallAndRequireBundle   
-    \ call vundle#installer#run('vundle#installer#install_and_require', split(<q-args>,',')[0], ['!' == '<bang>', <q-args>])
-
-  com! -buffer -bang -nargs=? InstallBundle
-    \ call vundle#installer#run('vundle#installer#install', split(<q-args>,',')[0], ['!' == '<bang>', <q-args>])
-
-  com! -buffer -bang -nargs=0 InstallHelptags 
+  com! -buffer -bang -nargs=0 InstallHelptags
     \ call vundle#installer#run('vundle#installer#docs', 'helptags', [])
 
   com! -buffer -nargs=0 VundleLog call s:view_log()
@@ -150,7 +141,7 @@ func! vundle#scripts#view(title, headers, results)
   nnoremap <buffer> c :BundleClean<CR>
   nnoremap <buffer> C :BundleClean!<CR>
 
-  nnoremap <buffer> s :BundleSearch 
+  nnoremap <buffer> s :BundleSearch
   nnoremap <buffer> R :call vundle#scripts#reload()<CR>
 
   " goto first line after headers
@@ -169,7 +160,7 @@ func! s:fetch_scripts(to)
   elseif executable("wget")
     let temp = vundle#installer#shellesc(tempname())
     let cmd = 'wget -q -O '.temp.' '.l:vim_scripts_json. ' && mv -f '.temp.' '.vundle#installer#shellesc(a:to)
-    if (has('win32') || has('win64')) 
+    if (has('win32') || has('win64'))
       let cmd = substitute(cmd, 'mv -f ', 'move /Y ', '') " change force flag
       let cmd = vundle#installer#shellesc(cmd)
     end

@@ -137,10 +137,10 @@ func! vundle#scripts#view(title, headers, results)
   nnoremap <buffer> D :exec 'Delete'.getline('.')<CR>
 
   nnoremap <buffer> add  :exec 'Install'.getline('.')<CR>
-  nnoremap <buffer> add! :exec 'Install'.substitute(getline('.'), '^Bundle ', 'Bundle! ', '')<CR>
+  nnoremap <buffer> add! :exec 'Install'.substitute(getline('.'), '^Plugin ', 'Plugin! ', '')<CR>
 
   nnoremap <buffer> i :exec 'InstallAndRequire'.getline('.')<CR>
-  nnoremap <buffer> I :exec 'InstallAndRequire'.substitute(getline('.'), '^Bundle ', 'Bundle! ', '')<CR>
+  nnoremap <buffer> I :exec 'InstallAndRequire'.substitute(getline('.'), '^Plugin ', 'Plugin! ', '')<CR>
 
   nnoremap <buffer> l :VundleLog<CR>
   nnoremap <buffer> u :VundleChangelog<CR>

@@ -117,9 +117,6 @@ func! vundle#scripts#view(title, headers, results)
   com! -buffer -bang -nargs=? InstallPlugin
     \ call vundle#installer#run('vundle#installer#install', split(<q-args>,',')[0], ['!' == '<bang>', <q-args>])
 
-  com! -buffer -bang -nargs=0 InstallHelptags
-    \ call vundle#installer#run('vundle#installer#docs', 'helptags', [])
-
   com! -buffer -bang -nargs=1 DeleteBundle
     \ call vundle#installer#run('vundle#installer#delete', split(<q-args>,',')[0], ['!' == '<bang>', <args>])
 
